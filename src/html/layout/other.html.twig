@@ -1,0 +1,12 @@
+{# Extend #}
+{% extends '../template/base.html.twig' %}
+
+{# Block #}
+{% block title %}{{ parent() }} - {{ 'title'|trans }}{% endblock %}
+
+{# Body #}
+{% block body %}
+    <h1>{{ 'title'|trans }}</h1>
+    <p>{{ 'content'|trans }}</p>
+{% endblock %}
+```

@@ -16,6 +16,7 @@ const config = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
     },
     devServer: {
         open: true,
@@ -23,7 +24,8 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: 'src/html/layout/index.html.twig',
+            inject: 'body',
         }),
 
         // Add your plugins here
@@ -31,6 +33,13 @@ const config = {
     ],
     module: {
         rules: [
+            {
+                test: /\.twig$/,
+                use: [
+                    'raw-loader',
+                    'twig-html-loader'
+                ],
+            },
             {
                 test: /\.(js|jsx)$/i,
                 loader: 'babel-loader',
@@ -44,8 +53,8 @@ const config = {
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: 'asset',
+                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|gltf)$/i,
+                type: 'asset/resource',
             },
 
             // Add your rules for custom modules here

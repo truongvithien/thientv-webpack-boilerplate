@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>
+        {% block title %}
+            Base Title
+        {% endblock %}
+    </title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="../assets/images/1.jpg">
+            </div> 
+            <div class="menu">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php?page=about">About</a></li>
+                    <li><a href="index.php?page=contact">Contact</a></li>
+                    <li><a href="index.php?page=login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            {% block content %}
+                Base Content
+            {% endblock %}
+        </div>
+        <div class="footer">
+            <p>&copy; 2023 - All Rights Reserved - ThienTV</p>
+        </div>
+    </div>
+</body>
+</html>
