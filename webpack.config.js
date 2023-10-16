@@ -24,8 +24,8 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: './index.html',
             template: 'src/html/layout/index.html.twig',
-            inject: 'body',
         }),
 
         // Add your plugins here

@@ -32,6 +32,7 @@
     "jquery": "^3.7.1",
     "normalize.css": "^8.0.1",
     "raw-loader": "^4.0.2",
-    "three": "^0.157.0"
+    "three": "^0.157.0",
+    "webfontloader": "^1.6.28"
   }
 }

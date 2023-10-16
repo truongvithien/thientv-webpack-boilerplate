@@ -17,4 +17,4 @@ const data = [
     }
 ];
 
-console.table(data)
+console.table(data) 
