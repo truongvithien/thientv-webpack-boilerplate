@@ -14,6 +14,7 @@ There are some features that are included in this boilerplate. You can choose to
 | JQuery     | ✅        |
 | ThreeJS    | ✅        |
 | GSAP       | ✅        |
+| BarbaJS    | ✅        |
 | ... | ... |
 
 Output willl be in `dist/` folder. You can use `dist/` folder as your root folder for your web server or web static hosting.
@@ -52,3 +53,4 @@ yarn build
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
